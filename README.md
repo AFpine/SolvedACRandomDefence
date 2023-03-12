@@ -1,6 +1,6 @@
 # SolvedACRandomDefence
 
-[Solved.ac](https://solved.ac/)사이트를 사용하여 원하는 난이도의 문제를 랜덤한 순서로 뽑아주는 코드
+[Solved.ac](https://solved.ac/) 의 문제 검색 페이지 사용하여 난이도와 순서를 보지 않고 문제를 뽑아주는 코드
 
 ## Usage
 #### 1. [Chrome Driver](https://chromedriver.chromium.org/downloads) 다운로드
