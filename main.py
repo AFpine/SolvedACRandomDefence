@@ -18,6 +18,8 @@ for user in users :
     search_str += f'!@{user} '
 search_str += f's#{minv}..{maxv} '
 
+search_str += '!#math '
+
 options = webdriver.ChromeOptions()
 options.add_argument("headless")        # 이 옵션을 끄면 chrome창이 켜지는게 눈에 보임 
                                         # 켜놓으면 cookie error가 뜨지만 상관은 없음
