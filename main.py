@@ -33,7 +33,8 @@ driver = webdriver.Chrome(chrome_driver_dir, options=options)
 driver.get('https://solved.ac/search?query=')
 time.sleep(delay)
 
-search_box = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[1]/div[1]/input')
+# search_box = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[1]/div[1]/input')       26/03/23
+search_box = driver.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/input')
 
 random.shuffle(levels)
 for level in levels :
@@ -45,11 +46,13 @@ for level in levels :
     search_box.send_keys(Keys.ENTER)
     time.sleep(delay)
 
-    suffle_button = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[2]/div[1]/div/a[6]')
+    # suffle_button = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[2]/div[1]/div/a[6]')       26/03/23
+    suffle_button = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[1]/div/a[6]')
     suffle_button.click()
     time.sleep(delay)
 
-    res = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]/div/div/div/span/a/span')
+    # res = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]/div/div/div/span/a/span')       26/03/23
+    res = driver.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div[2]/table/tbody/tr[3]/td[1]/div/div/div/span/a/span')
     result += str(res.get_attribute('innerHTML')) + " "
     # time.sleep(delay)
 driver.quit()
